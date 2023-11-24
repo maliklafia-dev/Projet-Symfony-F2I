@@ -1,0 +1,36 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+	{{parent()}}
+	my friend
+{% endblock %}
+
+{% block body %}
+	<div class="row">
+		<div class="col">
+			<p>
+				<img src="{{ asset('img/profil.jpg') }}" height="722" width="722" alt="damso">
+			</p>
+			<p>Bonjour monsieur
+
+				{{names | join(' ')}}
+			</p>
+			<p></p>
+			<p>
+				<a href="{{ url('home.hello', {name : 'world'}) }}">Hello world</a>
+			</p>
+
+			<p>
+				Vous êtes
+				{% for key, skill in skills %}
+					{{skill}}
+				{% endfor %}.
+			</p>
+
+			<p>Aujourd'hui nous sommes le
+				{{ date | date('d/M/Y') ~ ' et il est actuellement ' ~ date | date('H:i')}}
+			</p>
+		</div>
+	</div>
+
+{% endblock %}

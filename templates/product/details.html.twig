@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+	<div class="row">
+		<div class="card">
+			<img src="{{asset('img/') ~ product.image}}" class="card-img-top fluid" alt="">
+		</div>
+	</div>
+	<div class="card-body">
+		<h3 class="card-title">
+			{{product.name}}
+		</h3>
+	</div>
+	<p class="card-text">
+		{{product.description}}
+	</p>
+	<div class="card-text">
+		<p>Price :
+			{{product.price | format_currency('EUR', locale='fr') | replace({',00' : ''})}}</p>
+		<p>Quantity :
+			{{product.quantity == 0 ? 'Stock limited': product.quantity }}</p>
+	</div>
+{% endblock %}

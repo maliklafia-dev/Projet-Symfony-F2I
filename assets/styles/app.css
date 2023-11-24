@@ -1,0 +1,19 @@
+/* body {
+    background-color: #6565c76a;
+    color: white;
+    font: 5em Georgia;
+}
+
+img {
+    margin: 0 auto;
+}
+
+.grettings {
+    font-size: 3em;
+}
+
+:is(a, a:active, a:hover, a:visited, a:focus) {
+    color: yellow;
+    text-decoration: none;
+    font-style: oblique;
+} */
